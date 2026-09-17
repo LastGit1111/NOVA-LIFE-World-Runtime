@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "world_id": "nova-life-founders-district",
+  "world_type": "social",
+  "zones": [
+    {"id":"arrival-plaza","name":"Arrival Plaza"}, {"id":"language-cafe","name":"Language Café"},
+    {"id":"ai-app-district","name":"AI App District"}, {"id":"business-center","name":"Business Center"},
+    {"id":"creator-lab","name":"Creator Lab"}, {"id":"coworking-hub","name":"Coworking Hub"},
+    {"id":"event-center","name":"Event Center"}, {"id":"digital-marketplace","name":"Digital Marketplace"}
+  ],
+  "systems": ["movement","profile","presence","social","npc","stores","inventory","entitlements","events","analytics","moderation"],
+  "external_actions": "approval-gated"
+}
