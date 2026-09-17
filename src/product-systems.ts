@@ -1,0 +1,9 @@
+export type Language = 'en'|'nl'|'es'|'pap';
+export type MarketplaceManifest = { app_id:string; name:string; version:string; category:string; permissions:string[]; pricing:{model:'free'|'one_time'|'subscription';amount:number;currency:string}; approval_required:boolean; provenance:string; license:string };
+export type Lesson = { scenario:string; target:Language; prompts:string[]; corrections:boolean };
+export type DreamResult = { prompt:string; world_id:string; changes:string[]; validated:boolean; approval_required:boolean };
+export type EvolutionExperiment = { id:string; hypothesis:string; metric:string; baseline:number; canary:number|null; decision:'pending'|'ship'|'rollback' };
+export const LANGUAGE_SCENARIOS:Lesson[]=[{scenario:'cafe',target:'es',prompts:['Order a drink','Ask for the price'],corrections:true},{scenario:'business_meeting',target:'en',prompts:['Introduce your business','Propose a next step'],corrections:true}];
+export const REFERENCE_WORKER:MarketplaceManifest={app_id:'nova.business-advisor',name:'Business Advisor',version:'0.1.0',category:'business',permissions:['world.profile.read','analytics.read'],pricing:{model:'free',amount:0,currency:'USD'},approval_required:true,provenance:'NOVA-LIFE-World-Runtime',license:'MIT'};
+export function dreamMode(prompt:string):DreamResult { if(!prompt.trim()) throw new Error('prompt required'); return {prompt,world_id:`dream-${prompt.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)}`,changes:['generated concept','generated editable WorldSpec plan'],validated:false,approval_required:true}; }
+export function evaluateExperiment(experiment:EvolutionExperiment,canary:number):EvolutionExperiment { const decision=canary>=experiment.baseline?'ship':'rollback'; return {...experiment,canary,decision}; }
