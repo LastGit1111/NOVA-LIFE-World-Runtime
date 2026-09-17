@@ -1,0 +1,2 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import palette from '../design/caribbean-palette.json' with { type:'json' };
+test('locks the vivid Caribbean palette and warm neutrals',()=>{ assert.equal(palette.status,'locked'); assert.equal(palette.neutrals.sand_white,'#FFF8EC'); assert.equal(palette.rules.pure_black_forbidden,true); assert.equal(palette.rules.max_prominent_accents_per_screen,2); });

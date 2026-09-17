@@ -1,0 +1,11 @@
+{
+  "name": "Vivid Caribbean",
+  "status": "locked",
+  "accents": {"turquoise_lagoon":"#06D6C4","hibiscus_pink":"#FF3D7F","mango_sunset":"#FF8C42","papaya_yellow":"#FFD23F","calypso_coral":"#FF5E5B"},
+  "supporting": {"deep_ocean":"#003F5C","palm_shadow_green":"#1B998B","royal_reef_purple":"#8338EC"},
+  "neutrals": {"sand_white":"#FFF8EC","coconut_cream":"#F4E9D0","driftwood":"#8B7355","volcanic_black":"#1A1A2E","midnight_reef":"#16213E"},
+  "gradients": {"sunset":["#FF8C42","#FF3D7F"],"lagoon":["#06D6C4","#003F5C"],"hibiscus":["#FF3D7F","#8338EC"],"mango_to_papaya":["#FF8C42","#FFD23F"]},
+  "rules": {"warm_white_only":true,"pure_black_forbidden":true,"max_prominent_accents_per_screen":2,"surface_ratio":"60/30/10","card_radius_px":16,"hero_radius_px":24,"button_radius_px":12,"grain_opacity":"2-3%"},
+  "dark_mode": {"background":"#1A1A2E","surface":"#16213E","elevated_surface":"#1F2A4A","accent_policy":"retain vivid saturation"},
+  "application": {"background_light":"#FFF8EC","surface_light":"#F4E9D0","primary_cta":"#06D6C4","secondary_cta":"#FF3D7F","success":"#1B998B","error":"#FF5E5B","warning":"#FF8C42","premium":"#8338EC","celebration":"#FFD23F"}
+}
